@@ -44,6 +44,7 @@ docker-compose.yml
 *.sql
 *.md
 !README.md
+!UI_DESIGN_SPEC.md
 setup-*.ps1
 supabase-config*.json
 supabase-config*.env
