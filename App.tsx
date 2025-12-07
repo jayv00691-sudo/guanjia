@@ -22,9 +22,9 @@ const App = () => {
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-50 to-slate-200 text-slate-800 font-sans">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200 text-slate-800 font-sans">
       {/* Header */}
-      <div className="px-4 py-3 flex justify-between items-center sticky top-0 z-40 bg-white/70 backdrop-blur-md border-b border-white/20 shadow-sm">
+      <div className="glass-header px-4 py-3 flex justify-between items-center sticky top-0 z-40">
         <div className="flex items-center gap-2.5">
           <div className="w-10 h-10 rounded-full border-2 border-white shadow-md overflow-hidden bg-slate-100">
             <div className="w-full h-full bg-gradient-to-br from-indigo-400 to-purple-500"></div>
@@ -43,8 +43,8 @@ const App = () => {
 
       {/* Settings Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-black/20 backdrop-blur-sm flex justify-end animate-fade-in" onClick={() => setIsMenuOpen(false)}>
-          <div className="w-72 bg-white h-full shadow-2xl p-6 flex flex-col" onClick={e => e.stopPropagation()}>
+        <div className="fixed inset-0 z-50 bg-black/10 backdrop-blur-sm flex justify-end animate-fade-in" onClick={() => setIsMenuOpen(false)}>
+          <div className="glass-menu w-72 h-full p-6 flex flex-col" onClick={e => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-8">
               <h2 className="font-bold text-lg text-slate-800 flex items-center gap-2">
                 <SettingsIcon size={18}/> 设置
@@ -140,7 +140,7 @@ const App = () => {
                 <span className="text-xs opacity-80 mt-1">Nice Hand!</span>
               </div>
             </button>
-            <button className="h-24 bg-white border-2 border-dashed border-slate-300 rounded-3xl flex items-center justify-center hover:bg-slate-50 hover:border-indigo-300 transition-all text-slate-500 hover:text-indigo-600">
+            <button className="glass-panel h-24 border-2 border-dashed border-white/60 rounded-3xl flex items-center justify-center transition-all text-slate-600 hover:text-indigo-600">
               <div className="flex items-center gap-2 font-semibold">
                 <PlayCircle size={20} /> 补录战绩
               </div>
@@ -190,7 +190,7 @@ const App = () => {
       </main>
 
       {/* Bottom Navigation */}
-      <div className="fixed bottom-6 left-4 right-4 bg-white/90 backdrop-blur-lg rounded-3xl flex justify-between items-center px-6 py-3 shadow-2xl z-40 max-w-md mx-auto border border-white/50 ring-1 ring-black/5">
+      <div className="glass-nav fixed bottom-6 left-4 right-4 rounded-3xl flex justify-between items-center px-6 py-3 z-40 max-w-md mx-auto">
         <NavBtn icon={PieChart} label="统计" isActive={view === 'REPORT'} onClick={() => setView('REPORT')} />
         <NavBtn icon={Trophy} label="战绩" isActive={view === 'RESULTS'} onClick={() => setView('RESULTS')} />
         <div className="relative -top-6 group">
