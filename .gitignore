@@ -46,6 +46,7 @@ docker-compose.yml
 !README.md
 !UI_DESIGN_SPEC.md
 !FIGMA_CREATION_GUIDE.md
+!FREE_DESIGN_TOOLS.md
 setup-*.ps1
 supabase-config*.json
 supabase-config*.env
